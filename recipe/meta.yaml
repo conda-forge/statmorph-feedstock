@@ -1,6 +1,6 @@
 {% set name = "statmorph" %}
-{% set version = "0.1.0" %}
-{% set sha256 = "5e92600867b3ddbd3bd1194ca8689c5e99e214d909588e29860c05be5f14712e" %}
+{% set version = "0.2.0" %}
+{% set sha256 = "a175822f0e560a0260f8e37bb4181aadee6477ed2443badf66d4ca78be4838a7" %}
 
 package:
   name: {{ name|lower }}
@@ -22,6 +22,7 @@ requirements:
     - setuptools
   run:
     - python
+    - scipy >=0.19
     - scikit-image >=0.13
     - astropy >=2.0
     - photutils >=0.3

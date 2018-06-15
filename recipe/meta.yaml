@@ -1,6 +1,6 @@
 {% set name = "statmorph" %}
-{% set version = "0.2.1" %}
-{% set sha256 = "ccfcf9f34f6d32b46288a94e36ca6fe75fb3bd05bcdfba5b61879c6ff02185ca" %}
+{% set version = "0.3.0" %}
+{% set sha256 = "6b60fcffb07587797d76689d54c3e6bc2f9faa61c0a3921d93a268535971d48e" %}
 
 package:
   name: {{ name|lower }}
@@ -22,13 +22,15 @@ requirements:
   run:
     - python
     - scipy >=0.19
-    - scikit-image >=0.13
+    - scikit-image >=0.14
     - astropy >=2.0
     - photutils >=0.3
 
 test:
   imports:
     - statmorph
+  commands:
+    - python -c "import statmorph.tests; statmorph.tests.runall()"
 
 about:
   home: https://github.com/vrodgom/statmorph

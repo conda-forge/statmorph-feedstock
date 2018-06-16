@@ -29,6 +29,8 @@ requirements:
 test:
   imports:
     - statmorph
+  commands:
+    - python -c "import statmorph.tests; statmorph.tests.runall()"
 
 about:
   home: https://github.com/vrodgom/statmorph

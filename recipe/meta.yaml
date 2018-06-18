@@ -1,6 +1,6 @@
 {% set name = "statmorph" %}
-{% set version = "0.3.0" %}
-{% set sha256 = "6b60fcffb07587797d76689d54c3e6bc2f9faa61c0a3921d93a268535971d48e" %}
+{% set version = "0.3.1" %}
+{% set sha256 = "855d6476735b4c7d0ab42d0dd44e5644c7e6db540b2fa2466447f1812d8a9485" %}
 
 package:
   name: {{ name|lower }}
@@ -29,6 +29,8 @@ requirements:
 test:
   imports:
     - statmorph
+  commands:
+    - python -c "import statmorph.tests; statmorph.tests.runall()"
 
 about:
   home: https://github.com/vrodgom/statmorph

@@ -1,6 +1,6 @@
 {% set name = "statmorph" %}
-{% set version = "0.3.1" %}
-{% set sha256 = "855d6476735b4c7d0ab42d0dd44e5644c7e6db540b2fa2466447f1812d8a9485" %}
+{% set version = "0.3.2" %}
+{% set sha256 = "807003b01e94e4a7bd093dde52c29bf109150b1c2fad475c1d5fce41e5d0b652" %}
 
 package:
   name: {{ name|lower }}
@@ -24,7 +24,7 @@ requirements:
     - scipy >=0.19
     - scikit-image >=0.14
     - astropy >=2.0
-    - photutils >=0.3
+    - photutils >=0.5
 
 test:
   imports:
@@ -33,7 +33,7 @@ test:
     - python -c "import statmorph.tests; statmorph.tests.runall()"
 
 about:
-  home: https://github.com/vrodgom/statmorph
+  home: https://statmorph.readthedocs.io/
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
@@ -41,7 +41,7 @@ about:
   description: |
     Python code for calculating non-parametric morphological diagnostics
     of galaxy images.
-  doc_url: http://statmorph.readthedocs.io/
+  doc_url: https://statmorph.readthedocs.io/
   dev_url: https://github.com/vrodgom/statmorph
 
 extra:

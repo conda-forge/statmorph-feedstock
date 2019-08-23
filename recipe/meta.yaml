@@ -1,6 +1,6 @@
 {% set name = "statmorph" %}
-{% set version = "0.3.3" %}
-{% set sha256 = "ede396de1c9384b0b3a11d21187d370a6f0cc47f0e1f8803cb9a48f281095446" %}
+{% set version = "0.3.4" %}
+{% set sha256 = "02a82cd170576d5ec23bbbb4770480c1dc60162368ceba7f3f0c7f3b72bb6378" %}
 
 package:
   name: {{ name|lower }}

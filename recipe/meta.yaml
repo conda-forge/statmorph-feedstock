@@ -1,6 +1,5 @@
 {% set name = "statmorph" %}
 {% set version = "0.3.4" %}
-{% set sha256 = "02a82cd170576d5ec23bbbb4770480c1dc60162368ceba7f3f0c7f3b72bb6378" %}
 
 package:
   name: {{ name|lower }}
@@ -8,15 +7,15 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: 02a82cd170576d5ec23bbbb4770480c1dc60162368ceba7f3f0c7f3b72bb6378
 
 build:
   noarch: python
-  number: 2
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 3
+  script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
-  build:
+  host:
     - python
     - pip
   run:
@@ -29,8 +28,9 @@ requirements:
 test:
   imports:
     - statmorph
+    - statmorph.tests
   commands:
-    - python -c "import statmorph.tests; statmorph.tests.runall()"
+    - python -c "statmorph.tests.runall()"
 
 about:
   home: https://statmorph.readthedocs.io/

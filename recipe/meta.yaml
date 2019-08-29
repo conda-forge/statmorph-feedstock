@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 3
+  number: 4
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
@@ -28,9 +28,6 @@ requirements:
 test:
   imports:
     - statmorph
-    - statmorph.tests
-  commands:
-    - python -c "statmorph.tests.runall()"
 
 about:
   home: https://statmorph.readthedocs.io/

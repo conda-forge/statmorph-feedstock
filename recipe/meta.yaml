@@ -10,7 +10,7 @@ source:
   sha256: c4794d0474287bdc242c8932d970780858ad77d1ef848a1a59912ee5143f2db7
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install --no-deps . -vv"
   skip: true  # [py27]
 
@@ -30,7 +30,7 @@ test:
     - statmorph
     - statmorph.tests
   commands:
-    - python -c "statmorph.tests.runall()"
+    - python -c "import statmorph.tests; statmorph.tests.runall()"
 
 about:
   home: https://statmorph.readthedocs.io/

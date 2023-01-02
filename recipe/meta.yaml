@@ -1,5 +1,5 @@
 {% set name = "statmorph" %}
-{% set version = "0.4.0" %}
+{% set version = "0.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7d1bb802baf3e203ac44c630a58c5049da5eb4d85091ac35e3f5c6ee4af8b05a
+  sha256: 91c486706cdf87db454ac3fdde269f86dc5e7e01b31ef44e066016e8ed200d39
 
 build:
   number: 0
   script: "{{ PYTHON }} -m pip install --no-deps . -vv"
-  skip: true  # [py27]
+  skip: true  # [py<37]
 
 requirements:
   host:

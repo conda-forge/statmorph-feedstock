@@ -1,11 +1,11 @@
-About statmorph
-===============
+About statmorph-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/statmorph-feedstock/blob/main/LICENSE.txt)
 
 Home: https://statmorph.readthedocs.io/
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/statmorph-feedstock/blob/main/LICENSE.txt)
 
 Summary: Non-parametric morphological diagnostics of galaxy images
 

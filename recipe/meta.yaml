@@ -38,7 +38,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'Non-parametric morphological diagnostics of galaxy images'
+  summary: Non-parametric morphological diagnostics of galaxy images
   description: |
     Python code for calculating non-parametric morphological diagnostics
     of galaxy images.

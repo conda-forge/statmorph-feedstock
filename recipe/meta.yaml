@@ -1,5 +1,5 @@
 {% set name = "statmorph" %}
-{% set version = "0.5.2" %}
+{% set version = "0.5.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ba49b826c97c08fcc7b872c75675e1b2a4b882c91f3cd109e9a684539d552451
+  sha256: 89adf0c71011514f57fbc940ffa78d5aaa2231367ae2c78295f26b1905c2bd2a
 
 build:
   number: 0
@@ -30,6 +30,8 @@ test:
   imports:
     - statmorph
     - statmorph.tests
+  requires:
+    - pytest
   commands:
     - python -c "import statmorph.tests; statmorph.tests.runall()"
 

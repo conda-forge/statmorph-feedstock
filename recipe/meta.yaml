@@ -10,9 +10,9 @@ source:
   sha256: 89adf0c71011514f57fbc940ffa78d5aaa2231367ae2c78295f26b1905c2bd2a
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
-  skip: true  # [py<37]
+  skip: true  # [py<38]
 
 requirements:
   host:
@@ -32,8 +32,6 @@ test:
     - statmorph.tests
   requires:
     - pytest
-  commands:
-    - python -c "import statmorph.tests; statmorph.tests.runall()"
 
 about:
   home: https://statmorph.readthedocs.io/

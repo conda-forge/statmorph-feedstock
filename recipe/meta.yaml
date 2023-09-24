@@ -30,6 +30,8 @@ test:
   imports:
     - statmorph
     - statmorph.tests
+  requires:
+    - pytest
   commands:
     - python -c "import statmorph.tests; statmorph.tests.runall()"
 

@@ -10,7 +10,7 @@ source:
   sha256: 534e9be351b08cd10b044bf4fd94ca352f4a4f0eab9e167df706d04966dde594
 
 build:
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   skip: true  # [py<310]
 
@@ -24,7 +24,7 @@ requirements:
     - numpy >=1.14.0
     - scipy >=0.19
     - scikit-image >=0.14
-    - astropy >=2.0
+    - astropy-base >=2.0
     - photutils >=0.7
 
 test:

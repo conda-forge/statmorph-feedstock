@@ -1,5 +1,5 @@
 {% set name = "statmorph" %}
-{% set version = "0.6.0" %}
+{% set version = "0.6.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 534e9be351b08cd10b044bf4fd94ca352f4a4f0eab9e167df706d04966dde594
+  sha256: 291f3f4b8f75d6b646dcf91c00957a778fa76ac9a7c361a79a0c71d4b0473061
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   skip: true  # [py<310]
 
@@ -23,9 +23,9 @@ requirements:
     - python
     - numpy >=1.14.0
     - scipy >=0.19
-    - scikit-image >=0.14
+    - scikit-image >=0.25.0
     - astropy >=2.0
-    - photutils >=0.7
+    - photutils >=2.0
 
 test:
   imports:

@@ -1,5 +1,5 @@
 {% set name = "statmorph" %}
-{% set version = "0.7.0" %}
+{% set version = "0.7.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 94bc96da8529c6410221bd99e3b33e0bb518b62c88f59dc6c65aea1715a83d63
+  sha256: 30ad1e9ff1e69ac4223f5f289f9ad1f837a025a51e90c0d8d711f5ef6ace9ab0
 
 build:
   number: 0

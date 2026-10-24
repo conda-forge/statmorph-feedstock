@@ -20,7 +20,7 @@ requirements:
     - pip
     - setuptools
   run:
-    - python >=3.12
+    - python
     - numpy >=2.0
     - scipy >=1.15
     - scikit-image >=0.25.2
